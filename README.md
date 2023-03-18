@@ -59,3 +59,7 @@ This is an app that uses **bloc** as the state management system, **dio** as the
 
 1. Test that the RecipeView works correctly with the RecipeCubit and RecipeState.
 2. Test that the RecipeView interacts correctly with user input.
+
+# Screens
+
+<img src="images/gif/cut.gif" height="250"/>
