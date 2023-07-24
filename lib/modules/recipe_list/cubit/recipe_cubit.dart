@@ -2,10 +2,12 @@
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:recipe_app/modules/recipe_list/cubit/recipe_state.dart';
+import 'package:recipe_app/modules/recipe_list/cubit/recipe_status.dart';
 import 'package:recipe_app/repsitories/recipe_repository.dart';
 
 class RecipeCubit extends Cubit<RecipeState> {
-  RecipeCubit(this._repository) : super(RecipeState());
+  RecipeCubit(this._repository)
+      : super(RecipeState(status: RecipeStatus.initial, recipes: []));
 
   final RecipeRepositoryI _repository;
 

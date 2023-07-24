@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:recipe_app/injection_container.dart';
 import 'package:recipe_app/modules/recipe_list/cubit/recipe_cubit.dart';
 import 'package:recipe_app/modules/recipe_list/cubit/recipe_state.dart';
+import 'package:recipe_app/modules/recipe_list/cubit/recipe_status.dart';
 import 'package:recipe_app/modules/recipe_list/view/widgets/recipe_error.dart';
 import 'package:recipe_app/modules/recipe_list/view/widgets/recipe_item.dart';
 import 'package:recipe_app/utils/widgets/base_widget.dart';
@@ -47,7 +48,6 @@ class _RecipeViewState extends BaseState<RecipeView> {
           }
         },
         builder: (context, state) {
-          print(state.status);
           switch (state.status) {
             case RecipeStatus.initial:
             case RecipeStatus.loading:

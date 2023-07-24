@@ -1,30 +1,13 @@
-import 'package:equatable/equatable.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:recipe_app/model/recipe.dart';
+import 'package:recipe_app/modules/recipe_list/cubit/recipe_status.dart';
+part 'recipe_state.freezed.dart';
 
-enum RecipeStatus { initial, loading, success, failure }
-
-class RecipeState extends Equatable {
-  final RecipeStatus status;
-  final List<Recipe> recipes;
-  final Object? error;
-
-  const RecipeState({
-    this.status = RecipeStatus.initial,
-    this.recipes = const [],
-    this.error,
-  });
-
-  RecipeState copyWith({
-    RecipeStatus? status,
-    List<Recipe>? recipes,
+@freezed
+class RecipeState with _$RecipeState {
+  const factory RecipeState({
+    required RecipeStatus status,
+    required List<Recipe> recipes,
     Object? error,
-  }) {
-    return RecipeState(
-        status: status ?? this.status,
-        recipes: recipes ?? this.recipes,
-        error: error);
-  }
-
-  @override
-  List<Object?> get props => [status, recipes, error];
+  }) = _RecipeState;
 }

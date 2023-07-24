@@ -13,6 +13,7 @@ import 'package:mocktail/mocktail.dart';
 import 'package:recipe_app/model/recipe.dart';
 import 'package:recipe_app/modules/recipe_list/cubit/recipe_cubit.dart';
 import 'package:recipe_app/modules/recipe_list/cubit/recipe_state.dart';
+import 'package:recipe_app/modules/recipe_list/cubit/recipe_status.dart';
 import 'package:recipe_app/modules/recipe_list/view/recipe_page.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:recipe_app/modules/recipe_list/view/widgets/recipe_error.dart';
@@ -31,6 +32,7 @@ void main() {
       when(() => cubit.state).thenReturn(
         const RecipeState(
           status: RecipeStatus.loading,
+          recipes: [],
         ),
       );
 
@@ -71,6 +73,7 @@ void main() {
         RecipeState(
           status: RecipeStatus.failure,
           error: Exception(),
+          recipes: [],
         ),
       );
 
