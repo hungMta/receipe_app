@@ -6,7 +6,7 @@ This is an app that uses **bloc** as the state management system, **dio** as the
 
 ## Flutter version
 
-> 3.3.9
+> 3.10.6
 
 # Stacks
 
