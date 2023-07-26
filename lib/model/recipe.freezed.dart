@@ -20,17 +20,17 @@ Recipe _$RecipeFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Recipe {
-  String get calories => throw _privateConstructorUsedError;
-  String get carbos => throw _privateConstructorUsedError;
-  String get description => throw _privateConstructorUsedError;
-  int get difficulty => throw _privateConstructorUsedError;
-  String get fats => throw _privateConstructorUsedError;
-  String get headline => throw _privateConstructorUsedError;
-  String get image => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  String get proteins => throw _privateConstructorUsedError;
-  String get thumb => throw _privateConstructorUsedError;
-  String get time => throw _privateConstructorUsedError;
+  String? get calories => throw _privateConstructorUsedError;
+  String? get carbos => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+  int? get difficulty => throw _privateConstructorUsedError;
+  String? get fats => throw _privateConstructorUsedError;
+  String? get headline => throw _privateConstructorUsedError;
+  String? get image => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  String? get proteins => throw _privateConstructorUsedError;
+  String? get thumb => throw _privateConstructorUsedError;
+  String? get time => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,17 +43,17 @@ abstract class $RecipeCopyWith<$Res> {
       _$RecipeCopyWithImpl<$Res, Recipe>;
   @useResult
   $Res call(
-      {String calories,
-      String carbos,
-      String description,
-      int difficulty,
-      String fats,
-      String headline,
-      String image,
-      String name,
-      String proteins,
-      String thumb,
-      String time});
+      {String? calories,
+      String? carbos,
+      String? description,
+      int? difficulty,
+      String? fats,
+      String? headline,
+      String? image,
+      String? name,
+      String? proteins,
+      String? thumb,
+      String? time});
 }
 
 /// @nodoc
@@ -69,63 +69,63 @@ class _$RecipeCopyWithImpl<$Res, $Val extends Recipe>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? calories = null,
-    Object? carbos = null,
-    Object? description = null,
-    Object? difficulty = null,
-    Object? fats = null,
-    Object? headline = null,
-    Object? image = null,
-    Object? name = null,
-    Object? proteins = null,
-    Object? thumb = null,
-    Object? time = null,
+    Object? calories = freezed,
+    Object? carbos = freezed,
+    Object? description = freezed,
+    Object? difficulty = freezed,
+    Object? fats = freezed,
+    Object? headline = freezed,
+    Object? image = freezed,
+    Object? name = freezed,
+    Object? proteins = freezed,
+    Object? thumb = freezed,
+    Object? time = freezed,
   }) {
     return _then(_value.copyWith(
-      calories: null == calories
+      calories: freezed == calories
           ? _value.calories
           : calories // ignore: cast_nullable_to_non_nullable
-              as String,
-      carbos: null == carbos
+              as String?,
+      carbos: freezed == carbos
           ? _value.carbos
           : carbos // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: null == description
+              as String?,
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
-      difficulty: null == difficulty
+              as String?,
+      difficulty: freezed == difficulty
           ? _value.difficulty
           : difficulty // ignore: cast_nullable_to_non_nullable
-              as int,
-      fats: null == fats
+              as int?,
+      fats: freezed == fats
           ? _value.fats
           : fats // ignore: cast_nullable_to_non_nullable
-              as String,
-      headline: null == headline
+              as String?,
+      headline: freezed == headline
           ? _value.headline
           : headline // ignore: cast_nullable_to_non_nullable
-              as String,
-      image: null == image
+              as String?,
+      image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
+              as String?,
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      proteins: null == proteins
+              as String?,
+      proteins: freezed == proteins
           ? _value.proteins
           : proteins // ignore: cast_nullable_to_non_nullable
-              as String,
-      thumb: null == thumb
+              as String?,
+      thumb: freezed == thumb
           ? _value.thumb
           : thumb // ignore: cast_nullable_to_non_nullable
-              as String,
-      time: null == time
+              as String?,
+      time: freezed == time
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -137,17 +137,17 @@ abstract class _$$_RecipeCopyWith<$Res> implements $RecipeCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String calories,
-      String carbos,
-      String description,
-      int difficulty,
-      String fats,
-      String headline,
-      String image,
-      String name,
-      String proteins,
-      String thumb,
-      String time});
+      {String? calories,
+      String? carbos,
+      String? description,
+      int? difficulty,
+      String? fats,
+      String? headline,
+      String? image,
+      String? name,
+      String? proteins,
+      String? thumb,
+      String? time});
 }
 
 /// @nodoc
@@ -160,63 +160,63 @@ class __$$_RecipeCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? calories = null,
-    Object? carbos = null,
-    Object? description = null,
-    Object? difficulty = null,
-    Object? fats = null,
-    Object? headline = null,
-    Object? image = null,
-    Object? name = null,
-    Object? proteins = null,
-    Object? thumb = null,
-    Object? time = null,
+    Object? calories = freezed,
+    Object? carbos = freezed,
+    Object? description = freezed,
+    Object? difficulty = freezed,
+    Object? fats = freezed,
+    Object? headline = freezed,
+    Object? image = freezed,
+    Object? name = freezed,
+    Object? proteins = freezed,
+    Object? thumb = freezed,
+    Object? time = freezed,
   }) {
     return _then(_$_Recipe(
-      calories: null == calories
+      calories: freezed == calories
           ? _value.calories
           : calories // ignore: cast_nullable_to_non_nullable
-              as String,
-      carbos: null == carbos
+              as String?,
+      carbos: freezed == carbos
           ? _value.carbos
           : carbos // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: null == description
+              as String?,
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
-      difficulty: null == difficulty
+              as String?,
+      difficulty: freezed == difficulty
           ? _value.difficulty
           : difficulty // ignore: cast_nullable_to_non_nullable
-              as int,
-      fats: null == fats
+              as int?,
+      fats: freezed == fats
           ? _value.fats
           : fats // ignore: cast_nullable_to_non_nullable
-              as String,
-      headline: null == headline
+              as String?,
+      headline: freezed == headline
           ? _value.headline
           : headline // ignore: cast_nullable_to_non_nullable
-              as String,
-      image: null == image
+              as String?,
+      image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
+              as String?,
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      proteins: null == proteins
+              as String?,
+      proteins: freezed == proteins
           ? _value.proteins
           : proteins // ignore: cast_nullable_to_non_nullable
-              as String,
-      thumb: null == thumb
+              as String?,
+      thumb: freezed == thumb
           ? _value.thumb
           : thumb // ignore: cast_nullable_to_non_nullable
-              as String,
-      time: null == time
+              as String?,
+      time: freezed == time
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -225,43 +225,43 @@ class __$$_RecipeCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Recipe implements _Recipe {
   const _$_Recipe(
-      {required this.calories,
-      required this.carbos,
-      required this.description,
-      required this.difficulty,
-      required this.fats,
-      required this.headline,
-      required this.image,
-      required this.name,
-      required this.proteins,
-      required this.thumb,
-      required this.time});
+      {this.calories,
+      this.carbos,
+      this.description,
+      this.difficulty,
+      this.fats,
+      this.headline,
+      this.image,
+      this.name,
+      this.proteins,
+      this.thumb,
+      this.time});
 
   factory _$_Recipe.fromJson(Map<String, dynamic> json) =>
       _$$_RecipeFromJson(json);
 
   @override
-  final String calories;
+  final String? calories;
   @override
-  final String carbos;
+  final String? carbos;
   @override
-  final String description;
+  final String? description;
   @override
-  final int difficulty;
+  final int? difficulty;
   @override
-  final String fats;
+  final String? fats;
   @override
-  final String headline;
+  final String? headline;
   @override
-  final String image;
+  final String? image;
   @override
-  final String name;
+  final String? name;
   @override
-  final String proteins;
+  final String? proteins;
   @override
-  final String thumb;
+  final String? thumb;
   @override
-  final String time;
+  final String? time;
 
   @override
   String toString() {
@@ -312,42 +312,42 @@ class _$_Recipe implements _Recipe {
 
 abstract class _Recipe implements Recipe {
   const factory _Recipe(
-      {required final String calories,
-      required final String carbos,
-      required final String description,
-      required final int difficulty,
-      required final String fats,
-      required final String headline,
-      required final String image,
-      required final String name,
-      required final String proteins,
-      required final String thumb,
-      required final String time}) = _$_Recipe;
+      {final String? calories,
+      final String? carbos,
+      final String? description,
+      final int? difficulty,
+      final String? fats,
+      final String? headline,
+      final String? image,
+      final String? name,
+      final String? proteins,
+      final String? thumb,
+      final String? time}) = _$_Recipe;
 
   factory _Recipe.fromJson(Map<String, dynamic> json) = _$_Recipe.fromJson;
 
   @override
-  String get calories;
+  String? get calories;
   @override
-  String get carbos;
+  String? get carbos;
   @override
-  String get description;
+  String? get description;
   @override
-  int get difficulty;
+  int? get difficulty;
   @override
-  String get fats;
+  String? get fats;
   @override
-  String get headline;
+  String? get headline;
   @override
-  String get image;
+  String? get image;
   @override
-  String get name;
+  String? get name;
   @override
-  String get proteins;
+  String? get proteins;
   @override
-  String get thumb;
+  String? get thumb;
   @override
-  String get time;
+  String? get time;
   @override
   @JsonKey(ignore: true)
   _$$_RecipeCopyWith<_$_Recipe> get copyWith =>

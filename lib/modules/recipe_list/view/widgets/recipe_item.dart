@@ -14,9 +14,9 @@ class RecipeItem extends StatelessWidget {
         height: 150,
         child: Row(
           children: [
-            if (recipe.image.isNotEmpty)
+            if (recipe.image != null && recipe.image!.isNotEmpty)
               Image.network(
-                recipe.image,
+                recipe.image!,
                 width: 150,
                 height: 150,
                 fit: BoxFit.cover,
@@ -27,12 +27,12 @@ class RecipeItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    recipe.name,
+                    recipe.name ?? "",
                     style: Theme.of(context).textTheme.bodyLarge,
                   ),
                   space(h: 4),
                   Text(
-                    recipe.description,
+                    recipe.description ?? "",
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),

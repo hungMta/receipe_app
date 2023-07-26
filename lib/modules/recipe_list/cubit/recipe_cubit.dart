@@ -15,17 +15,9 @@ class RecipeCubit extends Cubit<RecipeState> {
     emit(state.copyWith(status: RecipeStatus.loading));
     try {
       final data = await _repository.fetchRecipes();
-      emit(
-        state.copyWith(
-          status: RecipeStatus.success,
-          recipes: data,
-        ),
-      );
+      emit(state.copyWith(status: RecipeStatus.success, recipes: data));
     } catch (exception) {
-      emit(state.copyWith(
-        status: RecipeStatus.failure,
-        error: exception,
-      ));
+      emit(state.copyWith(status: RecipeStatus.failure, error: exception));
     }
   }
 }

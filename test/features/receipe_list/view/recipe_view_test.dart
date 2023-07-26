@@ -29,6 +29,7 @@ void main() {
     });
 
     testWidgets('RecipeView in loading state', (tester) async {
+      // create initial state
       when(() => cubit.state).thenReturn(
         const RecipeState(
           status: RecipeStatus.loading,
@@ -36,10 +37,16 @@ void main() {
         ),
       );
 
+      // fake request fetchRecipe in RecipeView's initState
+      when(() => cubit.fetchRecipes()).thenAnswer((_) => Future.value());
+
+      // load RecipeView
       await tester.pumpWidget(
         BlocProvider.value(
           value: cubit,
-          child: const MaterialApp(home: RecipeView()),
+          child: const MaterialApp(
+            home: RecipeView(),
+          ),
         ),
       );
 
@@ -48,7 +55,7 @@ void main() {
 
     testWidgets('RecipeView for success state', (tester) async {
       final recipes = [
-        Recipe.fromJson(const {'name': 'meat'}),
+        Recipe.fromJson(const {'calories': 'meat'}),
       ];
 
       when(() => cubit.state).thenReturn(
@@ -57,6 +64,9 @@ void main() {
           recipes: recipes,
         ),
       );
+
+      // fake request fetchRecipe in RecipeView's initState
+      when(() => cubit.fetchRecipes()).thenAnswer((_) => Future.value());
 
       await tester.pumpWidget(
         BlocProvider.value(
@@ -76,6 +86,9 @@ void main() {
           recipes: [],
         ),
       );
+
+      // fake request fetchRecipe in RecipeView's initState
+      when(() => cubit.fetchRecipes()).thenAnswer((_) => Future.value());
 
       await tester.pumpWidget(
         BlocProvider.value(

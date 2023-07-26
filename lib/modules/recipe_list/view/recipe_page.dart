@@ -42,7 +42,6 @@ class _RecipeViewState extends BaseState<RecipeView> {
       body: Center(
           child: BlocConsumer<RecipeCubit, RecipeState>(
         listener: (context, state) {
-          // do some side effect
           if (state.status == RecipeStatus.failure && state.error != null) {
             handleError(state.error!);
           }
