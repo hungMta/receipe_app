@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:recipe_app/injection_container.dart';
 import 'package:recipe_app/modules/recipe_list/cubit/recipe_cubit.dart';
 import 'package:recipe_app/modules/recipe_list/cubit/recipe_state.dart';
+import 'package:recipe_app/modules/recipe_list/cubit/recipe_status.dart';
 import 'package:recipe_app/modules/recipe_list/view/widgets/recipe_error.dart';
 import 'package:recipe_app/modules/recipe_list/view/widgets/recipe_item.dart';
 import 'package:recipe_app/utils/widgets/base_widget.dart';
@@ -41,13 +42,11 @@ class _RecipeViewState extends BaseState<RecipeView> {
       body: Center(
           child: BlocConsumer<RecipeCubit, RecipeState>(
         listener: (context, state) {
-          // do some side effect
           if (state.status == RecipeStatus.failure && state.error != null) {
             handleError(state.error!);
           }
         },
         builder: (context, state) {
-          print(state.status);
           switch (state.status) {
             case RecipeStatus.initial:
             case RecipeStatus.loading:

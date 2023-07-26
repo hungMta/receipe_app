@@ -4,6 +4,7 @@ import 'package:mocktail/mocktail.dart';
 import 'package:recipe_app/model/recipe.dart';
 import 'package:recipe_app/modules/recipe_list/cubit/recipe_cubit.dart';
 import 'package:recipe_app/modules/recipe_list/cubit/recipe_state.dart';
+import 'package:recipe_app/modules/recipe_list/cubit/recipe_status.dart';
 import 'package:recipe_app/repsitories/recipe_repository.dart';
 
 class MockRecipeRepository extends Mock implements RecipeRepositoryI {}
@@ -26,7 +27,12 @@ void main() {
 
     test('ReceipCubit initial state is correct', () {
       final cubit = RecipeCubit(repository);
-      expect(cubit.state, const RecipeState());
+      expect(
+          cubit.state,
+          const RecipeState(
+            recipes: [],
+            status: RecipeStatus.initial,
+          ));
     });
 
     blocTest<RecipeCubit, RecipeState>(
@@ -38,7 +44,10 @@ void main() {
       build: () => recipeCubit,
       act: ((cubit) => cubit.fetchRecipes()),
       expect: () => [
-        const RecipeState(status: RecipeStatus.loading),
+        const RecipeState(
+          status: RecipeStatus.loading,
+          recipes: [],
+        ),
         RecipeState(status: RecipeStatus.success, recipes: recipes),
       ],
     );
@@ -52,8 +61,15 @@ void main() {
       },
       act: ((cubit) => cubit.fetchRecipes()),
       expect: () => [
-        const RecipeState(status: RecipeStatus.loading),
-        RecipeState(status: RecipeStatus.failure, error: tException),
+        const RecipeState(
+          status: RecipeStatus.loading,
+          recipes: [],
+        ),
+        RecipeState(
+          status: RecipeStatus.failure,
+          error: tException,
+          recipes: [],
+        ),
       ],
     );
   });

@@ -1,62 +1,22 @@
-import 'package:equatable/equatable.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+part 'recipe.freezed.dart';
+part 'recipe.g.dart';
 
-class Recipe extends Equatable {
-  final String id;
-  final String calories;
-  final String carbos;
-  final String description;
-  final int difficulty;
-  final String fats;
-  final String headline;
-  final String image;
-  final String name;
-  final String proteins;
-  final String thumb;
-  final String time;
+@freezed
+class Recipe with _$Recipe {
+  const factory Recipe({
+    String? calories,
+    String? carbos,
+    String? description,
+    int? difficulty,
+    String? fats,
+    String? headline,
+    String? image,
+    String? name,
+    String? proteins,
+    String? thumb,
+    String? time,
+  }) = _Recipe;
 
-  const Recipe(
-      {required this.id,
-      required this.calories,
-      required this.carbos,
-      required this.description,
-      required this.difficulty,
-      required this.fats,
-      required this.headline,
-      required this.image,
-      required this.name,
-      required this.proteins,
-      required this.thumb,
-      required this.time});
-
-  factory Recipe.fromJson(dynamic json) {
-    return Recipe(
-        id: json["id"] ?? "",
-        calories: json["calories"] ?? "",
-        carbos: json["carbos"] ?? "",
-        description: json["description"] ?? "",
-        difficulty: json["difficulty"] ?? 0,
-        fats: json["fats"] ?? "",
-        headline: json["headline"] ?? "",
-        image: json["image"] ?? "",
-        name: json["name"] ?? "",
-        proteins: json["proteins"] ?? "",
-        thumb: json["thumb"] ?? "",
-        time: json["time"] ?? "");
-  }
-
-  @override
-  List<Object?> get props => [
-        id,
-        calories,
-        calories,
-        description,
-        difficulty,
-        fats,
-        headline,
-        image,
-        name,
-        proteins,
-        thumb,
-        time
-      ];
+  factory Recipe.fromJson(Map<String, Object?> json) => _$RecipeFromJson(json);
 }
